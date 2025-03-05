@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Md Mehedi Hasan",
+    "classifications": [
+        "API",
+        "Clean Architecture",
+        "Domain Driven Design",
+        "Event Driven Architecture",
+        "CQRS",
+        ".NET Core",
+        "Linux"
+    ],
+    "identity": "Mehedi.CleanArchitecture.Template",
+    "name": "Clean Architecture Template",
+    "shortName": "cleanarch",
+    "sourceName": "Mehedi.CleanArchitecture",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "preferNameDirectory": true
+}
