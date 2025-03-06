@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Mehedi.CleanArchitecture.Template</id>
+    <title>ASP.NET Core Clean Architecture Solution</title>
+    <version>1.0.0</version>
+    <authors>Md Mehedi Hasan</authors>
+    <description>
+      The Clean Architecture Solution Template popularized by Md Mehedi Hasan. Provides a great starting point for modern and/or DDD solutions built with .NET 8 and C# 12.
+      Features zero tight coupling to database or data access technology.
+    </description>
+    <language>en-US</language>
+    <license type="expression">GPL-3.0 license</license>
+    <projectUrl>https://github.com/rabbicse/mehedi-cleanarch-template</projectUrl>
+    <releaseNotes>
+      * Add basic ASP.NET Core solution template with .NET 8
+    </releaseNotes>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+    <tags>Web ASP.NET "Clean Architecture" ddd domain-driven-design clean-architecture clean architecture CQRS SOLID</tags>
+    <readme>README.md</readme>
+  </metadata>
+  <files>
+    <file src=".\**" target="content" exclude="**\bin\**;**\obj\**;**\.git\**;**\.github\**;**\*.user;**\.vs\**;**\.vscode\**;**\.gitignore;**\sample\**" />
+    <file src="README.md" />
+  </files>
+</package>
