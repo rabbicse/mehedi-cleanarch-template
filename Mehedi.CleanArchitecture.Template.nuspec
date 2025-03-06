@@ -6,8 +6,7 @@
     <version>1.0.0</version>
     <authors>Md Mehedi Hasan</authors>
     <description>
-      The Clean Architecture Solution Template popularized by Md Mehedi Hasan. Provides a great starting point for modern and/or DDD solutions built with .NET 8 and C# 12.
-      Features zero tight coupling to database or data access technology.
+      The Clean Architecture Solution Template popularized by Md Mehedi Hasan. Provides a great starting point for modern and/or DDD solutions built with .NET 8 and C# 12.      
     </description>
     <language>en-US</language>
     <license type="expression">GPL-3.0 license</license>
@@ -18,7 +17,7 @@
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
-    <tags>Web ASP.NET "Clean Architecture" ddd domain-driven-design clean-architecture clean architecture CQRS SOLID</tags>
+    <tags>Web API ASP.NET "Clean Architecture" ddd domain-driven-design clean-architecture clean architecture CQRS SOLID</tags>
     <readme>README.md</readme>
   </metadata>
   <files>
