@@ -3,24 +3,7 @@
   <PropertyGroup>
     <UserSecretsId>c2d86818-1697-41eb-9a89-1a7b3588acac</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <IsPackable>true</IsPackable>
-    <Version>1.0.1</Version>
-    <Company>Md Mehedi Hasan</Company>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/rabbicse/mehedi-cleanarch-template</RepositoryUrl>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\..\..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\..\..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
@@ -32,13 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Application\CleanArchitecture.Application\CleanArchitecture.Application.csproj" />
-    <ProjectReference Include="..\..\Domain\CleanArchitecture.Domain\CleanArchitecture.Domain.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\CleanArchitecture.Infrastructure\CleanArchitecture.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Application\Mehedi.CleanArchitecture.Application\Mehedi.CleanArchitecture.Application.csproj" />
+    <ProjectReference Include="..\..\Domain\Mehedi.CleanArchitecture.Domain\Mehedi.CleanArchitecture.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Mehedi.CleanArchitecture.Infrastructure\Mehedi.CleanArchitecture.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

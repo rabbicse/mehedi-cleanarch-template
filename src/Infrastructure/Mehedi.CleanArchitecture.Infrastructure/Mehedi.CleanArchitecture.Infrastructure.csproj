@@ -1,9 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Dapper" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" />
@@ -12,9 +7,8 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
     <PackageReference Include="Mehedi.Write.RDBMS.Infrastructure.Abstractions" />
   </ItemGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\..\Domain\CleanArchitecture.Domain\CleanArchitecture.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\Mehedi.CleanArchitecture.Domain\Mehedi.CleanArchitecture.Domain.csproj" />
   </ItemGroup>
 
 </Project>
