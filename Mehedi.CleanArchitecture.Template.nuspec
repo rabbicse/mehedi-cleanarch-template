@@ -3,7 +3,7 @@
   <metadata>
     <id>Mehedi.CleanArchitecture.Template</id>
     <title>ASP.NET Core Clean Architecture Solution</title>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <authors>Md Mehedi Hasan</authors>
     <description>
       The Clean Architecture Solution Template popularized by Md Mehedi Hasan. Provides a great starting point for modern and/or DDD solutions built with .NET 8 and C# 12.      
@@ -26,6 +26,7 @@
     <file src="LICENSE" target="LICENSE" />
   </files>
 </package>
+
 
 
 
