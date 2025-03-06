@@ -23,7 +23,7 @@
         {
             "modifiers": [
                 {
-                    "include": [".editorconfig", "README.md", ".gitignore", "Directory.Build.props", "Directory.Packages.props"]
+                    "include": [".editorconfig", "README.md", ".gitignore", "Directory.Build.props", "Directory.Packages.props", "**/*.sln"]
                 }
             ]
         }

@@ -27,6 +27,7 @@
     <file src=".editorconfig" />
     <file src="Directory.Build.props" />
     <file src="Directory.Packages.props" />
+    <file src="**/*.sln" />
   </files>
 </package>
 
