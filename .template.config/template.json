@@ -11,12 +11,21 @@
         "Linux"
     ],
     "identity": "Mehedi.CleanArchitecture.Template",
-    "name": "Clean Architecture Template",
+    "name": "ASP.NET Core Clean Architecture API",
     "shortName": "cleanarch",
     "sourceName": "Mehedi.CleanArchitecture",
     "tags": {
         "language": "C#",
         "type": "project"
     },
-    "preferNameDirectory": true
+    "preferNameDirectory": true,
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "include": [".editorconfig", "README.md", ".gitignore", "Directory.Build.props", "Directory.Packages.props"]
+                }
+            ]
+        }
+    ]
 }
