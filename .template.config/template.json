@@ -23,7 +23,19 @@
         {
             "modifiers": [
                 {
-                    "include": [".editorconfig", "README.md", ".gitignore", "Directory.Build.props", "Directory.Packages.props", "**/*.sln"]
+                    "include": [
+                        ".editorconfig",
+                        "README.md",
+                        ".gitignore",
+                        "Directory.Build.props",
+                        "Directory.Packages.props",
+                        "**/*.sln"
+                    ]
+                }
+            ],
+            "primaryOutputs": [
+                {
+                    "path": "Mehedi.CleanArchitecture.sln"
                 }
             ]
         }

@@ -21,13 +21,13 @@
     <readme>README.md</readme>
   </metadata>
   <files>
-    <file src=".\**" target="content" exclude="**\bin\**;**\obj\**;**\.git\**;**\.github\**;**\*.user;**\.vs\**;**\.vscode\**;**\.gitignore;**\sample\**" />
+        <file src=".\**" target="content" exclude="**\.git\**;**\.github\**;**\bin\**;**\obj\**;**\.vs\**;**\.vscode\**;**\*.user;**\*.suo;**\.idea\**" />
     <file src="README.md" />
     <file src="LICENSE" target="LICENSE" />
     <file src=".editorconfig" />
     <file src="Directory.Build.props" />
     <file src="Directory.Packages.props" />
-    <file src="**/*.sln" />
+    <file src="Mehedi.CleanArchitecture.sln" target="Mehedi.CleanArchitecture.sln" />
   </files>
 </package>
 
