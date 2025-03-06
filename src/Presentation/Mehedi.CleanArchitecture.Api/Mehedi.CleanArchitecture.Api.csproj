@@ -4,6 +4,7 @@
     <UserSecretsId>c2d86818-1697-41eb-9a89-1a7b3588acac</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <IsPackable>true</IsPackable>
+    <Version>1.0.14</Version>
     <Company>Md Mehedi Hasan</Company>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/rabbicse/mehedi-cleanarch-template</RepositoryUrl>
