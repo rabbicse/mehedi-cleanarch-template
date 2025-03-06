@@ -5,6 +5,7 @@ on:
       - master # Your default release branch
     paths:
       - 'Mehedi.CleanArchitecture.Template.nuspec'
+      - 'src/Presentation/Mehedi.CleanArchitecture.Api/**'
 jobs:
   publish:
     name: Publish on nuget
