@@ -9,7 +9,7 @@
       The Clean Architecture Solution Template popularized by Md Mehedi Hasan. Provides a great starting point for modern and/or DDD solutions built with .NET 8 and C# 12.      
     </description>
     <language>en-US</language>
-    <license type="expression">GPL-3.0</license>
+    <license type="file">LICENSE</license>
     <projectUrl>https://github.com/rabbicse/mehedi-cleanarch-template</projectUrl>
     <releaseNotes>
       * Add basic ASP.NET Core solution template with .NET 8
