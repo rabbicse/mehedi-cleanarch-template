@@ -1,5 +1,5 @@
-[![Nuget](https://img.shields.io/nuget/v/Mehedi.Hangfire.Extensions)](https://www.nuget.org/packages/Mehedi.Hangfire.Extensions/)
-[![Nuget](https://img.shields.io/nuget/dt/Mehedi.Hangfire.Extensions)](https://www.nuget.org/packages/Mehedi.Hangfire.Extensions/)
+[![Nuget](https://img.shields.io/nuget/v/Mehedi.CleanArchitecture.Template)](https://www.nuget.org/packages/Mehedi.CleanArchitecture.Template/)
+[![Nuget](https://img.shields.io/nuget/dt/Mehedi.CleanArchitecture.Template)](https://www.nuget.org/packages/Mehedi.CleanArchitecture.Template/)
 
 # .NET Core Clean Architecture Template
 
