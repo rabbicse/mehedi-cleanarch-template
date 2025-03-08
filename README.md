@@ -1,4 +1,7 @@
-# Clean Architecture Template
+[![Nuget](https://img.shields.io/nuget/v/Mehedi.Hangfire.Extensions)](https://www.nuget.org/packages/Mehedi.Hangfire.Extensions/)
+[![Nuget](https://img.shields.io/nuget/dt/Mehedi.Hangfire.Extensions)](https://www.nuget.org/packages/Mehedi.Hangfire.Extensions/)
+
+# .NET Core Clean Architecture Template
 
 A modular and scalable Clean Architecture template for .NET projects. This template follows industry best practices for structuring .NET applications, making development more maintainable and testable.
 
