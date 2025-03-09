@@ -33,7 +33,7 @@ Mehedi.CleanArch.Template/
 │   ├── Application/     # Business logic, use cases, MediatR handlers
 │   ├── Domain/          # Entities, Aggregates, Value Objects
 │   ├── Infrastructure/  # Database, Repositories, External services
-│   ├── API/             # ASP.NET Core API project
+│   ├── Presentation/             # ASP.NET Core API project
 │-- tests/
 │   ├── UnitTests/       # Unit tests for business logic
 │   ├── IntegrationTests/# Integration tests
