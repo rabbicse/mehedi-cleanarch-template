@@ -1,10 +1,8 @@
-﻿using Mehedi.Application.SharedKernel.Responses;
+﻿using CleanArchitecture.Domain.ValueObjects;
+using Mehedi.Application.SharedKernel.Responses;
 
 namespace CleanArchitecture.Application.UseCases.Customers.DTOs;
 
 
-public record CreatedCustomerResponse(Guid id) : IResponse
-{
-    public Guid Id { get; } = id;
-}
+public record CustomerResponse(Guid Id, string Name, PhoneNumber? Phone) : IResponse;
 

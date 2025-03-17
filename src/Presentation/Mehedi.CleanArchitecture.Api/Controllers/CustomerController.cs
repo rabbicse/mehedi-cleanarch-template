@@ -1,8 +1,8 @@
 ﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
-using CleanArchitecture.Application.UseCases.Customers.Commands;
 using MediatR;
+using Mehedi.CleanArchitecture.Application.UseCases.Customers.Commands.Create;
 using Mehedi.CleanArchitecture.Application.UseCases.Customers.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
