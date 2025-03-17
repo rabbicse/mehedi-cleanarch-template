@@ -24,7 +24,7 @@ public class CreateCustomerCommandHandler(ICustomerCommandRepository repository,
         // Saving changes to the database and triggering domain events.
         var success = await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
-        if (!success) return Result.Error("");
+        if (!success) return Result.Error("Error create customer!");
 
         // Returning the ID and success message.
         return Result<CustomerResponse>.Success(

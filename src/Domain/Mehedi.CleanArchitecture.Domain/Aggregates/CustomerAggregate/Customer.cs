@@ -8,6 +8,7 @@ public class Customer(string name, PhoneNumber? phone) : BaseEntity<Guid>, IAggr
     public string? Name { get; private set; } = name;
     public PhoneNumber? PhoneNumber { get; private set; } = phone;
 
-    public void SetPhoneNumber(string phoneNumber) => PhoneNumber = new PhoneNumber(string.Empty, phoneNumber, string.Empty);
+    public void SetName(string name) => Name = name;
+    public void SetPhoneNumber(PhoneNumber phoneNumber) => PhoneNumber = phoneNumber;
     protected override Guid GenerateNewId() => Guid.NewGuid();
 }

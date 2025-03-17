@@ -3,6 +3,8 @@
 
 using MediatR;
 using Mehedi.CleanArchitecture.Application.UseCases.Customers.Commands.Create;
+using Mehedi.CleanArchitecture.Application.UseCases.Customers.Commands.Delete;
+using Mehedi.CleanArchitecture.Application.UseCases.Customers.Commands.Update;
 using Mehedi.CleanArchitecture.Application.UseCases.Customers.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -25,8 +27,34 @@ public class CustomersController(IMediator mediator) : ControllerBase
     [Produces(MediaTypeNames.Application.Json)]
     public async Task<IActionResult> Create([FromBody][Required] CreateCustomerCommand command)
     {
-        await _mediator.Send(command);
-        return Ok("Customer Command Request Accepted");
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Delete customer data
+    /// </summary>
+    /// <returns></returns>
+    [HttpPut]
+    [Consumes(MediaTypeNames.Application.Json)]
+    [Produces(MediaTypeNames.Application.Json)]
+    public async Task<IActionResult> Update([FromBody][Required] UpdateCustomerCommand command)
+    {
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Update customer data
+    /// </summary>
+    /// <returns></returns>
+    [HttpDelete]
+    [Consumes(MediaTypeNames.Application.Json)]
+    [Produces(MediaTypeNames.Application.Json)]
+    public async Task<IActionResult> Delete([FromBody][Required] DeleteCustomerCommand command)
+    {
+        var result = await _mediator.Send(command);
+        return Ok(result);
     }
 
     /// <summary>
