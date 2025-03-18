@@ -2,6 +2,4 @@
 
 namespace CleanArchitecture.Domain.Aggregates.CustomerAggregate.Repositories;
 
-public interface ICustomerCommandRepository : ICommandRepository<Customer, Guid>
-{
-}
+public interface ICustomerCommandRepository : ICommandRepository<Customer, Guid>;
