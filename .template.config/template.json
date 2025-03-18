@@ -19,26 +19,6 @@
         "type": "project"
     },
     "preferNameDirectory": true,
-    "Database": {
-        "type": "parameter",
-        "datatype": "choice",
-        "choices": [
-            {
-                "choice": "postgresql",
-                "description": "PostgreSQL"
-            },
-            {
-                "choice": "sqlite",
-                "description": "SQLite"
-            },
-            {
-                "choice": "sqlserver",
-                "description": "SQL Server"
-            }
-        ],
-        "defaultValue": "sqlserver",
-        "description": "The database type to use."
-    },
     "symbols": {        
         "Database": {
             "type": "parameter",

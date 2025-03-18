@@ -29,7 +29,7 @@ public static class DependencyInjections
 
 #if (UsePostgreSQL)
             // For Postgres Connection
-            .AddDbContext<ApplicationDbContext>(options =>
+            .AddDbContext<ApplicationWriteDbContext>(options =>
             {
                 options.UseNpgsql(
                     connectionString,

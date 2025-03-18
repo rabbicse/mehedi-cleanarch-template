@@ -18,6 +18,7 @@ public class ApplicationReadDbContext : IDisposable
     }
 
     public IDbConnection? Connection => _lazyConnection?.Value;
+
     #region IDisposable
 
     // To detect redundant calls.
