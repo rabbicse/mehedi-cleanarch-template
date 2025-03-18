@@ -1,5 +1,5 @@
 [![Build](https://github.com/rabbicse/mehedi-cleanarch-template/actions/workflows/publish-template.yml/badge.svg)](https://github.com/rabbicse/mehedi-cleanarch-template/actions/workflows/publish-template.yml)
-[![CodeQL](https://github.com/rabbicse/mehedi-cleanarch-template/blob/master/.github/workflows/codeql.yml/badge.svg)]([https://github.com/jasontaylordev/CleanArchitecture/actions/workflows/codeql.yml](https://github.com/rabbicse/mehedi-cleanarch-template/blob/master/.github/workflows/codeql.yml))
+[![CodeQL](https://github.com/rabbicse/mehedi-cleanarch-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/rabbicse/mehedi-cleanarch-template/actions/workflows/codeql.yml)
 [![Nuget](https://img.shields.io/nuget/v/Mehedi.CleanArchitecture.Template)](https://www.nuget.org/packages/Mehedi.CleanArchitecture.Template/)
 [![Nuget](https://img.shields.io/nuget/dt/Mehedi.CleanArchitecture.Template)](https://www.nuget.org/packages/Mehedi.CleanArchitecture.Template/)
 
