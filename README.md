@@ -5,7 +5,11 @@
 
 # .NET Core Clean Architecture Template
 
-A modular and scalable Clean Architecture template for .NET projects. This template follows industry best practices for structuring .NET applications, making development more maintainable and testable.
+The goal of this template is to provide a straightforward and efficient approach to enterprise API development, leveraging the power of Clean Architecture and ASP.NET Core. Using this template, you can effortlessly create scalable and maintainable APIs while adhering to Clean Architecture principles.
+
+Getting started is easy—simply install the .NET template (see below for full details).
+
+If you find this project useful, please give it a star. Thanks! ⭐
 
 ## Features
 
