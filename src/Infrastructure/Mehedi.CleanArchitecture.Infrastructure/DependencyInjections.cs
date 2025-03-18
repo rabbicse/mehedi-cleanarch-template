@@ -4,6 +4,7 @@ using CleanArchitecture.Infrastructure.Repositories;
 using Mehedi.Application.SharedKernel.Persistence;
 using Mehedi.Core.SharedKernel;
 using Mehedi.Write.RDBMS.Infrastructure.Abstractions.Persistence;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -23,14 +24,39 @@ public static class DependencyInjections
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration config)
     {
         string? connectionString = config.GetConnectionString("SqlConnection");
-        // For SQLServer Connection
-        return services            
+
+        return services
+
+#if (UsePostgreSQL)
+            // For Postgres Connection
+            .AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseNpgsql(
+                    connectionString,
+                    npgsqlOptionsAction: npgsqlOptions =>
+                    {
+                        // Any additional configuration for SQL Server options can be applied here if needed               
+                    });
+            })
+#else
+            // For SQLServer Connection
+            .AddDbContext<ApplicationWriteDbContext>(options =>
+            {
+                options.UseSqlServer(
+                    connectionString,
+                    sqlServerOptionsAction: sqlOptions =>
+                    {
+                        // Any additional configuration for SQL Server options can be applied here if needed               
+                    });
+            })
+#endif
+
         // Register the ApplicationDbContext as a scoped service implementing IWriteDbContext
         .AddScoped<IWriteDbContext>(provider => provider.GetRequiredService<ApplicationWriteDbContext>())
 
         // Register Dapper context
         .AddSingleton(sp => new ApplicationReadDbContext(connectionString))
-        
+
         // Register the UnitOfWork as a scoped service implementing IUnitOfWork
         .AddScoped<IUnitOfWork, UnitOfWork>()
 

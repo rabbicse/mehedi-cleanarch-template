@@ -19,6 +19,60 @@
         "type": "project"
     },
     "preferNameDirectory": true,
+    "Database": {
+        "type": "parameter",
+        "datatype": "choice",
+        "choices": [
+            {
+                "choice": "postgresql",
+                "description": "PostgreSQL"
+            },
+            {
+                "choice": "sqlite",
+                "description": "SQLite"
+            },
+            {
+                "choice": "sqlserver",
+                "description": "SQL Server"
+            }
+        ],
+        "defaultValue": "sqlserver",
+        "description": "The database type to use."
+    },
+    "symbols": {        
+        "Database": {
+            "type": "parameter",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "postgresql",
+                    "description": "PostgreSQL"
+                },
+                {
+                    "choice": "sqlite",
+                    "description": "SQLite"
+                },
+                {
+                    "choice": "sqlserver",
+                    "description": "SQL Server"
+                }
+            ],
+            "defaultValue": "sqlserver",
+            "description": "The database type to use."
+        },
+        "UsePostgreSQL": {
+            "type": "computed",
+            "value": "(Database == \"postgresql\")"
+        },
+        "UseSqlite": {
+            "type": "computed",
+            "value": "(Database == \"sqlite\")"
+        },
+        "UseSqlServer": {
+            "type": "computed",
+            "value": "(Database == \"sqlserver\")"
+        }
+    },
     "sources": [
         {
             "modifiers": [
