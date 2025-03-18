@@ -22,8 +22,8 @@ A modular and scalable Clean Architecture template for .NET projects. This templ
 ### Prerequisites
 
 - .NET 8 SDK
-- Docker (optional)
-- SQL Server or PostgreSQL (if using EF Core)
+- Docker
+- SQL Server or PostgreSQL
 
 ## Project Structure
 
@@ -34,10 +34,10 @@ Mehedi.CleanArch.Template/
 │   ├── Domain/          # Entities, Aggregates, Value Objects
 │   ├── Infrastructure/  # Database, Repositories, External services
 │   ├── Presentation/             # ASP.NET Core API project
+│      │-- Dockerfile           # Docker configuration
 │-- tests/
 │   ├── UnitTests/       # Unit tests for business logic
 │   ├── IntegrationTests/# Integration tests
-│-- Dockerfile           # Docker configuration
 │-- README.md            # Project documentation
 ```
 
@@ -48,10 +48,15 @@ List all the dotnet core templates with the following command.
 dotnet new list
 ```
 
+### Install **cleanarch** template
+```bash
+dotnet new install Mehedi.CleanArchitecture.Template
+```
+
 ### Create New project
 Write the following command to create new .NET project with `cleanarch` template.
 ```bash
-dotnet new cleanarch -n MyProject
+dotnet new cleanarch -n MyProject -D postgresql
 ```
 
 Then just run project with the following command.
@@ -73,3 +78,5 @@ For any inquiries, reach out to [Mehedi](https://github.com/rabbicse).
 
 ## References
 - [dotnet-runtime](https://github.com/dotnet/runtime)
+- [ardalis/CleanArchitecture](https://github.com/ardalis/CleanArchitecture)
+- [jasontaylordev/CleanArchitecture](https://github.com/jasontaylordev/CleanArchitecture)
