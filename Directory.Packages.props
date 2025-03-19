@@ -9,7 +9,6 @@
     <PackageVersion Include="Mehedi.Core.SharedKernel" Version="1.0.5" />
     <PackageVersion Include="Mehedi.Write.RDBMS.Infrastructure.Abstractions" Version="1.0.4" />
     <PackageVersion Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.2" />
-    <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
     <PackageVersion Include="Serilog.AspNetCore" Version="9.0.0" />
     <PackageVersion Include="Serilog.Settings.Configuration" Version="9.0.0" />
     <PackageVersion Include="Serilog.Sinks.Console" Version="6.0.0" />
@@ -17,7 +16,12 @@
     <PackageVersion Include="SonarAnalyzer.CSharp" Version="10.7.0.110445" />
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="7.3.1" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
+    <!--#if (UsePostgreSQL)-->
+    <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <!--#endif-->
+    <!--#if (UseSqlServer)-->
     <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.3" />
+    <!--#endif-->
     <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.3" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.3" />
     <PackageVersion Include="xunit" Version="2.5.3" />
