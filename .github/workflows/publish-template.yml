@@ -1,4 +1,4 @@
-name: publish Mehedi.CleanArchitecture Template to nuget
+name: publish to nuget
 on:
   push:
     branches:
