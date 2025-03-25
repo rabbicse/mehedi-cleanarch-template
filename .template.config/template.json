@@ -19,7 +19,7 @@
         "type": "project"
     },
     "preferNameDirectory": true,
-    "symbols": {        
+    "symbols": {
         "Database": {
             "type": "parameter",
             "datatype": "choice",
@@ -51,6 +51,27 @@
         "UseSqlServer": {
             "type": "computed",
             "value": "(Database == \"sqlserver\")"
+        },
+        "EnableEventSourcing": {
+            "type": "parameter",
+            "datatype": "bool",
+            "allowMultipleValues": false,
+            "choices": [
+                {
+                    "choice": true,
+                    "description": "✔ Enable Event Sourcing"
+                },
+                {
+                    "choice": false,
+                    "description": "❌ Disable Event Sourcing"
+                }
+            ],
+            "defaultValue": false,
+            "description": "Enable or disable event sourcing."
+        },
+        "UseEventSourcing": {
+            "type":"computed",
+            "value": "(EnableEventSourcing == true)"
         }
     },
     "sources": [
