@@ -72,6 +72,27 @@
         "UseEventSourcing": {
             "type":"computed",
             "value": "(EnableEventSourcing == true)"
+        },
+        "EnableCaching": {
+            "type": "parameter",
+            "datatype": "bool",
+            "allowMultipleValues": false,
+            "choices": [
+                {
+                    "choice": true,
+                    "description": "✔ Enable Caching"
+                },
+                {
+                    "choice": false,
+                    "description": "❌ Disable Caching"
+                }
+            ],
+            "defaultValue": false,
+            "description": "Enable or Disable Caching."
+        },
+        "UseCaching": {
+            "type":"computed",
+            "value": "(EnableCaching == true)"
         }
     },
     "sources": [
