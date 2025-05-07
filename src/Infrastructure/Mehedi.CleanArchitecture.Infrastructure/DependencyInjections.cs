@@ -38,7 +38,7 @@ public static class DependencyInjections
                         // Any additional configuration for SQL Server options can be applied here if needed               
                     });
             })
-#else
+#elif(UseSqlServer)
             // For SQLServer Connection
             .AddDbContext<ApplicationWriteDbContext>(options =>
             {

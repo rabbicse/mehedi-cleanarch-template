@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehedi.CleanArchitecture.In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehedi.CleanArchitecture.RedisCache.Infrastructure", "src\Infrastructure\Mehedi.CleanArchitecture.RedisCache.Infrastructure\Mehedi.CleanArchitecture.RedisCache.Infrastructure.csproj", "{B999F2E3-4BEA-C85E-A199-AFA830560F1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure", "src\Infrastructure\Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure\Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure.csproj", "{CDB068D0-3877-C651-41DA-37D8ECC0FB11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{B999F2E3-4BEA-C85E-A199-AFA830560F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B999F2E3-4BEA-C85E-A199-AFA830560F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B999F2E3-4BEA-C85E-A199-AFA830560F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB068D0-3877-C651-41DA-37D8ECC0FB11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB068D0-3877-C651-41DA-37D8ECC0FB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB068D0-3877-C651-41DA-37D8ECC0FB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB068D0-3877-C651-41DA-37D8ECC0FB11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +78,7 @@ Global
 		{45E8B84B-BB50-4075-9E3A-6F9FA5E045D6} = {19F2288C-20FF-4B67-9F15-498A3FB4FFD1}
 		{037CEEAB-30BC-9F60-18C1-4052C59D6E14} = {6C9FDB7C-9954-4523-9D7A-4F448B964134}
 		{B999F2E3-4BEA-C85E-A199-AFA830560F1D} = {6C9FDB7C-9954-4523-9D7A-4F448B964134}
+		{CDB068D0-3877-C651-41DA-37D8ECC0FB11} = {6C9FDB7C-9954-4523-9D7A-4F448B964134}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78F4C812-6FE8-4B60-B773-EB195E30D0FF}

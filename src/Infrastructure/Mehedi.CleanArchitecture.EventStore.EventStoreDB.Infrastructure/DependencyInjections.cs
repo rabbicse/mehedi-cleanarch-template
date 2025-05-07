@@ -1,5 +1,5 @@
 ﻿using EventStore.Client;
-using KYC.EventStore.EventStoreDB.Infrastructure.Repositories;
+using Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure.Repositories;
 using Mehedi.Application.SharedKernel.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +15,7 @@ public record EventStoreDBOptions(
     bool UseInternalCheckpointing = true
 );
 
-public static class DependencyInjection
+public static class DependencyInjections
 {
     private const string DefaultConfigKey = "EventStoreDbConnection";
     //public static IServiceCollection AddEventStoreDB(
@@ -37,15 +37,7 @@ public static class DependencyInjection
         var connectionString = config.GetConnectionString(DefaultConfigKey);
         var settings = EventStoreClientSettings.Create(connectionString);
         services
-            //.AddSingleton(EventTypeMapper.Instance)
             .AddSingleton(new EventStoreClient(settings));
-        //.AddTransient<EventStoreDBSubscriptionToAll, EventStoreDBSubscriptionToAll>();
-
-        //if (options?.UseInternalCheckpointing != false)
-        //{
-        //    services
-        //        .AddTransient<ISubscriptionCheckpointRepository, EventStoreDBSubscriptionCheckpointRepository>();
-        //}
 
         return services.AddScoped<IEventStoreRepository, EventStoreRepository>();
     }

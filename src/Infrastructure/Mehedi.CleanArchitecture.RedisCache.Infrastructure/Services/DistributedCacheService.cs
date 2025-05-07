@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 
 namespace Mehedi.CleanArchitecture.RedisCache.Infrastructure.Services;
 
-internal class DistributedCacheService : ICacheService
+internal sealed class DistributedCacheService : ICacheService
 {
     private const string CacheServiceName = nameof(DistributedCacheService);
     private readonly DistributedCacheEntryOptions _cacheOptions;

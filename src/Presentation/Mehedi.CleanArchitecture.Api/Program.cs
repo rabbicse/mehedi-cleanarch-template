@@ -4,11 +4,27 @@ using Serilog;
 using Serilog.Settings.Configuration;
 using CleanArchitecture.Application;
 using CleanArchitecture.Infrastructure;
+#if UseCaching
+using Mehedi.CleanArchitecture.RedisCache.Infrastructure;
+#endif
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Get OS runtime
 string os = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "Linux" : "Windows";
+
+var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+var basePath = Directory.GetCurrentDirectory();
+
+builder.Configuration.SetBasePath(basePath)
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddEnvironmentVariables();
+
+// Load base + env-specific config files dynamically
+foreach (var file in Directory.GetFiles(basePath, $"appsettings.{environment}.*.json", SearchOption.TopDirectoryOnly))
+{
+    builder.Configuration.AddJsonFile(file, optional: true, reloadOnChange: true);
+}
 
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
@@ -34,6 +50,9 @@ builder.Services.AddControllers();
 // Add dependencies from Application layer
 builder.Services.AddApplications();
 builder.Services.AddInfrastructureServices(builder.Configuration);
+#if UseCaching
+builder.Services.AddCacheInfrastructureServices(builder.Configuration);
+#endif
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

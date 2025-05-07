@@ -70,7 +70,7 @@
             "description": "Enable or disable event sourcing."
         },
         "UseEventSourcing": {
-            "type":"computed",
+            "type": "computed",
             "value": "(EnableEventSourcing == true)"
         },
         "EnableCaching": {
@@ -91,12 +91,29 @@
             "description": "Enable or Disable Caching."
         },
         "UseCaching": {
-            "type":"computed",
+            "type": "computed",
             "value": "(EnableCaching == true)"
         }
     },
     "sources": [
         {
+            "source": "./",
+            "target": "./",
+            "exclude": [
+                ".git/**/*",
+                ".template.config/**/*",
+                ".vs/**/*",
+                "*.nuspec",
+                "bin/**/*",
+                "obj/**/*",
+                "src/Infrastructure/Mehedi.CleanArchitecture.RedisCache.Infrastructure/**",
+                "src/Infrastructure/Mehedi.CleanArchitecture.Read.Mongo.Infrastructure/**",
+                "src/Infrastructure/Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure/**",
+                "src/Infrastructure/Data/PostgreSQL/**",
+                "src/Presentation/Mehedi.CleanArchitecture.Api/appsettings.Development.Postgres.json",
+                "src/Presentation/Mehedi.CleanArchitecture.Api/appsettings.Development.Redis.json",
+                ".github/**/*"
+            ],
             "modifiers": [
                 {
                     "include": [
@@ -106,6 +123,13 @@
                         "Directory.Build.props",
                         "Directory.Packages.props",
                         "**/*.sln"
+                    ]
+                },
+                {
+                    "condition": "(UseCaching)",
+                    "include": [
+                        "src/Infrastructure/Mehedi.CleanArchitecture.RedisCache.Infrastructure/**",
+                        "src/Presentation/Mehedi.CleanArchitecture.Api/appsettings.Development.Redis.json"
                     ]
                 }
             ],

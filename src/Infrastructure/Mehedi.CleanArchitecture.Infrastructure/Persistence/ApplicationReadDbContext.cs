@@ -1,5 +1,9 @@
 ﻿using System.Data;
+#if UseSqlServer
 using Microsoft.Data.SqlClient;
+#elif UsePostgreSQL
+using Npgsql;
+#endif
 
 namespace CleanArchitecture.Infrastructure.Persistence;
 
@@ -11,9 +15,17 @@ public class ApplicationReadDbContext : IDisposable
     {
         _lazyConnection = new Lazy<IDbConnection?>(() =>
         {
+#if UseSqlServer
             var connection = new SqlConnection(connectionString);
             connection.Open();
             return connection;
+#elif UsePostgreSQL
+            var connection = new NpgsqlConnection(connectionString);
+            connection.Open();
+            return connection;
+#else
+            throw new InvalidOperationException("No database provider defined. Define UseSqlServer or UsePostgreSQL.");
+#endif
         });
     }
 

@@ -3,11 +3,13 @@ using Mehedi.Application.SharedKernel.Services;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
 
-namespace KYC.EventStore.EventStoreDB.Infrastructure.Repositories;
+namespace Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure.Repositories;
 
 public sealed class EventStoreRepository(EventStoreClient eventStoreClient, ILogger<EventStoreRepository> logger) : IEventStoreRepository
 {
+#pragma warning disable CA2213 // Disposable fields should be disposed
     private readonly EventStoreClient _eventStoreClient = eventStoreClient;
+#pragma warning restore CA2213 // Disposable fields should be disposed
     private readonly ILogger<EventStoreRepository> _logger = logger;
     /// <summary>
     /// Append events asynchronously
@@ -28,9 +30,15 @@ public sealed class EventStoreRepository(EventStoreClient eventStoreClient, ILog
             eventStores.Select(ev => new EventData(
                 Uuid.NewUuid(), 
                 "Test Event", 
-                JsonSerializer.SerializeToUtf8Bytes(ev))));
+                JsonSerializer.SerializeToUtf8Bytes(ev)))).ConfigureAwait(false);
 
+#pragma warning disable CA1848 // Use the LoggerMessage delegates
+#pragma warning disable CA2254 // Template should be a static expression
+#pragma warning disable S2629 // Logging templates should be constant
         _logger.LogInformation($"Event Store result: {result.NextExpectedStreamRevision}");
+#pragma warning restore S2629 // Logging templates should be constant
+#pragma warning restore CA2254 // Template should be a static expression
+#pragma warning restore CA1848 // Use the LoggerMessage delegates
     }
 
     #region IDisposable
