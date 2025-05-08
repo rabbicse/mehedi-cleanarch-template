@@ -4,7 +4,7 @@ using Mehedi.Application.SharedKernel.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace KYC.EventStore.EventStoreDB.Infrastructure;
+namespace Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure;
 
 public class EventStoreDBConfig
 {
@@ -17,27 +17,21 @@ public record EventStoreDBOptions(
 
 public static class DependencyInjections
 {
-    private const string DefaultConfigKey = "EventStoreDbConnection";
-    //public static IServiceCollection AddEventStoreDB(
-    //    this IServiceCollection services,
-    //    IConfiguration config,
-    //    EventStoreDBOptions? options = null
-    //) =>
-    //    services.AddEventStoreDB(
-    //        config,
-    //        options
-    //    );
-
     public static IServiceCollection AddEventStoreInfrastructureServices(
         this IServiceCollection services,
         IConfiguration config,
         EventStoreDBOptions? options = null
     )
     {
-        var connectionString = config.GetConnectionString(DefaultConfigKey);
-        var settings = EventStoreClientSettings.Create(connectionString);
-        services
-            .AddSingleton(new EventStoreClient(settings));
+        var connectionString = config.GetConnectionString("EventStoreDbConnection");
+        if (!string.IsNullOrEmpty(connectionString))
+        {
+            services.AddSingleton<EventStoreClient>(provider =>
+            {
+                var settings = EventStoreClientSettings.Create(connectionString);
+                return new EventStoreClient(settings);
+            });
+        }
 
         return services.AddScoped<IEventStoreRepository, EventStoreRepository>();
     }

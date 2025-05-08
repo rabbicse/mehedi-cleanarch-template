@@ -7,6 +7,9 @@ using CleanArchitecture.Infrastructure;
 #if UseCaching
 using Mehedi.CleanArchitecture.RedisCache.Infrastructure;
 #endif
+#if UseEventSourcing
+using Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure;
+#endif
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,8 +53,13 @@ builder.Services.AddControllers();
 // Add dependencies from Application layer
 builder.Services.AddApplications();
 builder.Services.AddInfrastructureServices(builder.Configuration);
+
 #if UseCaching
 builder.Services.AddCacheInfrastructureServices(builder.Configuration);
+#endif
+
+#if UseEventSourcing
+builder.Services.AddEventStoreInfrastructureServices(builder.Configuration);
 #endif
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

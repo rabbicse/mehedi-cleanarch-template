@@ -16,10 +16,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Application\Mehedi.CleanArchitecture.Application\Mehedi.CleanArchitecture.Application.csproj" />
-    <ProjectReference Include="..\..\Domain\Mehedi.CleanArchitecture.Domain\Mehedi.CleanArchitecture.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\Mehedi.CleanArchitecture.Domain\Mehedi.CleanArchitecture.Domain.csproj" />    
     <ProjectReference Include="..\..\Infrastructure\Mehedi.CleanArchitecture.Infrastructure\Mehedi.CleanArchitecture.Infrastructure.csproj" />
     <!--#if (UseCaching)-->
     <ProjectReference Include="..\..\Infrastructure\Mehedi.CleanArchitecture.RedisCache.Infrastructure\Mehedi.CleanArchitecture.RedisCache.Infrastructure.csproj" />
+    <!--#endif-->
+    <!--#if (UseEventSourcing)-->
+    <ProjectReference Include="..\..\Infrastructure\Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure\Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure.csproj" />
     <!--#endif-->
   </ItemGroup>
 

@@ -30,10 +30,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehedi.CleanArchitecture.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehedi.CleanArchitecture.Infrastructure", "src\Infrastructure\Mehedi.CleanArchitecture.Infrastructure\Mehedi.CleanArchitecture.Infrastructure.csproj", "{037CEEAB-30BC-9F60-18C1-4052C59D6E14}"
 EndProject
+#if (UseCaching)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehedi.CleanArchitecture.RedisCache.Infrastructure", "src\Infrastructure\Mehedi.CleanArchitecture.RedisCache.Infrastructure\Mehedi.CleanArchitecture.RedisCache.Infrastructure.csproj", "{B999F2E3-4BEA-C85E-A199-AFA830560F1D}"
 EndProject
+#endif
+#if (UseEventSourcing)
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure", "src\Infrastructure\Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure\Mehedi.CleanArchitecture.EventStore.EventStoreDB.Infrastructure.csproj", "{CDB068D0-3877-C651-41DA-37D8ECC0FB11}"
 EndProject
+#endif
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
