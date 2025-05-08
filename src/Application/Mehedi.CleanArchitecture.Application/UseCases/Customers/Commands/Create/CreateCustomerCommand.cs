@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Application.UseCases.Customers.DTOs;
-using CleanArchitecture.Domain.ValueObjects;
+﻿using Mehedi.CleanArchitecture.Domain.ValueObjects;
 using MediatR;
 using Mehedi.Application.SharedKernel.Responses;
+using Mehedi.CleanArchitecture.Application.UseCases.Customers.DTOs;
 
 namespace Mehedi.CleanArchitecture.Application.UseCases.Customers.Commands.Create;
 

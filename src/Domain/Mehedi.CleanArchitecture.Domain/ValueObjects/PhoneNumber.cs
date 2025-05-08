@@ -1,6 +1,6 @@
 ﻿using Mehedi.Core.SharedKernel;
 
-namespace CleanArchitecture.Domain.ValueObjects;
+namespace Mehedi.CleanArchitecture.Domain.ValueObjects;
 
 public class PhoneNumber(string countryCode, 
                         string number, 

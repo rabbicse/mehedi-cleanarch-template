@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Aggregates.CustomerAggregate.Repositories;
-using MediatR;
+﻿using MediatR;
 using Mehedi.Application.SharedKernel.Responses;
+using Mehedi.CleanArchitecture.Domain.Aggregates.CustomerAggregate.Repositories;
 using Mehedi.Core.SharedKernel;
 
 namespace Mehedi.CleanArchitecture.Application.UseCases.Customers.Commands.Delete;

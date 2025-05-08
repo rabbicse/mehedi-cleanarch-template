@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Application.UseCases.Customers.DTOs;
-using CleanArchitecture.Domain.Aggregates.CustomerAggregate;
-using CleanArchitecture.Domain.Aggregates.CustomerAggregate.Repositories;
+﻿using Mehedi.CleanArchitecture.Domain.Aggregates.CustomerAggregate;
+using Mehedi.CleanArchitecture.Domain.Aggregates.CustomerAggregate.Repositories;
 using MediatR;
 using Mehedi.Application.SharedKernel.Responses;
 using Mehedi.Core.SharedKernel;
+using Mehedi.CleanArchitecture.Application.UseCases.Customers.DTOs;
 
 namespace Mehedi.CleanArchitecture.Application.UseCases.Customers.Commands.Create;
 

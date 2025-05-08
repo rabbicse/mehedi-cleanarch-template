@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Domain.Aggregates.CustomerAggregate;
+﻿using Mehedi.CleanArchitecture.Domain.Aggregates.CustomerAggregate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CleanArchitecture.Infrastructure.EfConfigurations;
+namespace Mehedi.CleanArchitecture.Infrastructure.EfConfigurations;
 
 /// <summary>
 /// Source: https://github.com/dotnet/eShop/blob/main/src/Ordering.Infrastructure/OrderingContext.cs

@@ -1,14 +1,14 @@
-﻿using CleanArchitecture.Domain.Aggregates.CustomerAggregate.Repositories;
-using CleanArchitecture.Infrastructure.Persistence;
-using CleanArchitecture.Infrastructure.Repositories;
+﻿using CleanArchitecture.Infrastructure.Persistence;
+using Mehedi.CleanArchitecture.Infrastructure.Repositories;
 using Mehedi.Application.SharedKernel.Persistence;
+using Mehedi.CleanArchitecture.Domain.Aggregates.CustomerAggregate.Repositories;
 using Mehedi.Core.SharedKernel;
 using Mehedi.Write.RDBMS.Infrastructure.Abstractions.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CleanArchitecture.Infrastructure;
+namespace Mehedi.CleanArchitecture.Infrastructure;
 
 /// <summary>
 /// Provides extension methods for configuring dependency injection services.

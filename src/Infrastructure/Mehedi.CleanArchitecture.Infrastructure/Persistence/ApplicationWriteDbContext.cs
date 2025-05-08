@@ -6,9 +6,9 @@
 using Microsoft.EntityFrameworkCore;
 using Mehedi.Application.SharedKernel.Persistence;
 using System.Reflection;
-using CleanArchitecture.Domain.Aggregates.CustomerAggregate;
-using CleanArchitecture.Infrastructure.EfConfigurations;
+using Mehedi.CleanArchitecture.Infrastructure.EfConfigurations;
 using Mehedi.Core.SharedKernel;
+using Mehedi.CleanArchitecture.Domain.Aggregates.CustomerAggregate;
 
 /// <summary>
 /// Represents the RDBMS database context for the application.

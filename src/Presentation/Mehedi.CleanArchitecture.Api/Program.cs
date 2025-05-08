@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Serilog;
 using Serilog.Settings.Configuration;
 using CleanArchitecture.Application;
-using CleanArchitecture.Infrastructure;
+using Mehedi.CleanArchitecture.Infrastructure;
 #if UseCaching
 using Mehedi.CleanArchitecture.RedisCache.Infrastructure;
 #endif

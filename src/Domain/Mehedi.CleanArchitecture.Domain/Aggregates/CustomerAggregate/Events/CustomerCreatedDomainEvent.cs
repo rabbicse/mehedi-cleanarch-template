@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Domain.ValueObjects;
+﻿using Mehedi.CleanArchitecture.Domain.ValueObjects;
 using Mehedi.Core.SharedKernel;
 
-namespace CleanArchitecture.Domain.Aggregates.CustomerAggregate.Events;
+namespace Mehedi.CleanArchitecture.Domain.Aggregates.CustomerAggregate.Events;
 
 /// <summary>
 /// 

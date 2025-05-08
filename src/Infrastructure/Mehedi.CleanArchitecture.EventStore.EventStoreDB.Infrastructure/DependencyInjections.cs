@@ -23,7 +23,7 @@ public static class DependencyInjections
         EventStoreDBOptions? options = null
     )
     {
-        var connectionString = config.GetConnectionString("EventStoreDbConnection");
+        var connectionString = config.GetConnectionString("EventStoreConnection");
         if (!string.IsNullOrEmpty(connectionString))
         {
             services.AddSingleton<EventStoreClient>(provider =>
